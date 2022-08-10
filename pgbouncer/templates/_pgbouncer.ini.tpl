@@ -36,12 +36,12 @@ unix_socket_dir = var/run/postgresql
 ;client_tls_protocols = all
 ;client_tls_dheparams = auto
 ;client_tls_ecdhcurve = auto
-;server_tls_sslmode = disable
+server_tls_sslmode = prefer
 ;server_tls_ca_file = <system default>
 ;server_tls_key_file =
 ;server_tls_cert_file =
-;server_tls_protocols = all
-;server_tls_ciphers = fast
+server_tls_protocols = secure
+server_tls_ciphers = HIGH:!ADH:!AECDH:!LOW:!EXP:!MD5:!3DES:!SRP:!PSK:@STRENGTH
 ; any, trust, plain, crypt, md5, cert, hba, pam
 
 ;;; Authentication settings

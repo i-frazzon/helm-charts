@@ -3,12 +3,12 @@ entries:
   pgbouncer:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-08-10T16:12:44.079255-03:00"
+    created: "2022-08-10T16:27:15.452961-03:00"
     description: A Helm chart for Pgbouncer
-    digest: cc34e88a906be9d3b96d6f5eddbee0ca707e7c6d5cb18e9647c21ab31838eb46
+    digest: 2d6a15f88111a9b4aec8a6a56a931bcaaf37f346f14ab3fef1044ce3c808518e
     name: pgbouncer
     type: application
     urls:
     - https://i-frazzon.github.io/helm-chart/pgbouncer-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-10T16:12:44.077994-03:00"
+generated: "2022-08-10T16:27:15.451702-03:00"
