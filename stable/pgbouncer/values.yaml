@@ -1,3 +1,4 @@
+##
 # For all pgbouncer config, please check https://www.pgbouncer.org/config.html
 # Deployment values for pgbouncer
 replicaCount: 1
