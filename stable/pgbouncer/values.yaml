@@ -110,12 +110,50 @@ clientLoginTimeout: 60
 customSettings: {}
 
 # Service configuration
+
 service:
   enabled: true
   type: ClusterIP
   name: ""
   annotations: {}
 
+ingress: 
+  enabled: false
+  # className: "alb"
+  # port: 80
+  # annotations: 
+  #   alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}"'
+  #   alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:xxxxxxxxx:certificate/xxxxxxxxxxx
+  #   alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
+  #   alb.ingress.kubernetes.io/ssl-redirect: '443' 
+  #   alb.ingress.kubernetes.io/scheme: internet-facing
+  #   alb.ingress.kubernetes.io/target-type: ip
+  #   external-dns.alpha.kubernetes.io/hostname: pgbouncer.exemple.com
+  # hosts:
+  #   - host: pgbouncer.exemple.com
+  #     paths:
+  #       - path: /
+  #         pathType: Prefix
+  # tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+awsRegion: us-east-1
 global:
   # optionally use namespace as dbname
   namespacedDatabases: false
+
+resources:
+  requests:
+    memory: 1Gi
+    cpu: 500m
+  limits:
+    memory: 1Gi
+    cpu: 500m
+
+autoscaling:
+  enabled: false
+  minReplicas: 3
+  maxReplicas: 5
+  averageUtilization: 80
+  # averageValue: 100Mi
